@@ -355,7 +355,7 @@ var Packet = function(args) {
 		properties.sourceSSID = (field&ax25.Defs.A_SSID)>>1;
 
 		// Address Field: Repeater path
-		while(field&1 == 0) {
+		while((field&1) == 0) {
 			field = frame.splice(0, 6);
 			var repeater = {
 				'callsign' : "",
@@ -534,7 +534,7 @@ var Packet = function(args) {
 			"%s-%s -> %s-%s%s, C: %s, R: %s, PF: %s, Type: %s, PID: %s, %s%s",
 			this.sourceCallsign, this.sourceSSID,
 			this.destinationCallsign, this.destinationSSID,
-			(this.repeaterPath.length > 0) ? " (" + this.repeaterPath.join("->") + ")" : "",
+			(this.repeaterPath.length > 0) ? " (" + this.repeaterPath.map(c => c.callsign.trim() + '-' + c.ssid).join("->") + ")" : "",
 			this.command, this.response, this.pollFinal, type, pid,
 			(type == "I_FRAME" || type.match(/^S_FRAME.*/) !== null) ? "N(R): " + this.nr : "",
 			(type == "I_FRAME")  ? ", N(S): " + this.ns : ""
