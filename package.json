@@ -1,33 +1,35 @@
-{	"name" : "ax25",
-	"version" : "1.1.2",
-	"license" : "BSD-3-Clause",
-	"description" : "A KISS & AX.25 packet radio stack for node.js.",
-	"author" : {
-		"name" : "Derek Mullin",
-		"email" : "derekmullin@gmail.com"
-	},
-	"contributors" : [
-		{	"name" : "Derek Mullin (VE3XEC)",
-			"email" : "derekmullin@gmail.com"
-		}
-	],
-	"main" : "./index.js",
-	"repository" : {
-		"type" : "git",
-		"url" : "https://github.com/echicken/node-ax25.git"
-	},
-	"dependencies" : {
-		"serialport" : "= 2.1.2"
-	},
-	"engines" : {
-		"node" : ">= 0.10.24"
-	},
-	"keywords" : [
-		"ax25",
-		"ax.25",
-		"ham",
-		"packet",
-		"radio",
-		"kiss"
-	]
+{
+  "name": "ax25",
+  "version": "1.1.2",
+  "license": "BSD-3-Clause",
+  "description": "A fork of : A KISS & AX.25 packet radio stack for node.js.",
+  "author": {
+    "name": "Derek Mullin",
+    "email": "derekmullin@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Derek Mullin (VE3XEC)",
+      "email": "derekmullin@gmail.com"
+    }
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valentintintin/node-ax25.git"
+  },
+  "dependencies": {
+    "serialport": "=6.0.4"
+  },
+  "engines": {
+    "node": ">= 0.10.24"
+  },
+  "keywords": [
+    "ax25",
+    "ax.25",
+    "ham",
+    "packet",
+    "radio",
+    "kiss"
+  ]
 }
