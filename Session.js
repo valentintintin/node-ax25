@@ -46,12 +46,16 @@ var Session = function(args) {
 		'connect' : {
 			'event' : undefined,
 			'attempts' : 0,
-			'callback' : self.connect
+			'callback' : function() {
+				self.connect
+            }
 		},
 		'disconnect' : {
 			'event' : undefined,
 			'attempts' : 0,
-			'callback' : self.disconnect
+			'callback' : function() {
+				self.disconnect
+            }
 		},
 		't1' : {
 			'event' : undefined,
@@ -80,6 +84,7 @@ var Session = function(args) {
 			}
 		}
 	};
+
 
 	this.__defineGetter__(
 		"connected",
@@ -529,8 +534,13 @@ var Session = function(args) {
 				)
 			);
 			state.connection = DISCONNECTED;
+
 			return;
 		}
+
+
+        // state.sendBuffer = [];
+        // state.receiveBuffer = [];
 
 		timers.disconnect.attempts++;
 		state.connection = DISCONNECTING;
