@@ -11,6 +11,10 @@
     {
       "name": "Derek Mullin (VE3XEC)",
       "email": "derekmullin@gmail.com"
+    },
+    {
+      "name": "Valentin Saugnier (F4HVV)",
+      "email": "valentin.s.10@gmail.com"
     }
   ],
   "main": "./index.js",
@@ -18,8 +22,8 @@
     "type": "git",
     "url": "https://github.com/valentintintin/node-ax25.git"
   },
-  "dependencies": {
-    "serialport": "=6.0.4"
+  "optionalDependencies": {
+    "serialport": "^8.0.8"
   },
   "engines": {
     "node": ">= 0.10.24"
